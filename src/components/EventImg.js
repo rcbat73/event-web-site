@@ -8,6 +8,10 @@ const TextContainer = styled.div`
     padding: 0 14px;
     text-align: left;
 
+    @media (max-width: 1204px) {
+        width: 800px;
+    }
+
     @media (max-width: 768px) {
         width: 480px;
     }
@@ -35,6 +39,11 @@ const TextContainer = styled.div`
                 margin-top: 165px;
             }
 
+            @media (max-width: 1024px) {
+                margin-top: 65px;
+                font-size: 3em;
+            }
+
             @media (max-width: 768px) {
                 margin-top: 25px;
                 font-size: 3em;
@@ -49,6 +58,11 @@ const TextContainer = styled.div`
         &:nth-child(3) {
             margin-top: 50px;
             font-size: 89px;
+
+            @media (max-width: 1024px) {
+                margin-top: 45px;
+                font-size: 4em;
+            }
 
             @media (max-width: 768px) {
                 margin-top: 4px;
