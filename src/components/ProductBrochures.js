@@ -7,7 +7,7 @@ import { brochuresData } from '../constants';
 
 const ProductBrochures = () => {
     return (
-        <InfoContainer topMargin="129" isDarkColor>
+        <InfoContainer topMargin="129" smallerMargin="30" isDarkColor>
             <InfoHeader text1="What’s on Event" text2="product brochures" />
             <SelectBox />
             <BrochuresList dataList={brochuresData} />

@@ -18,10 +18,26 @@ import './App.css';
 library.add(icons);
 
 const AppContainer = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    margin: auto;
+    font-family: 'Centrale Sans';
+    text-align: center;
     background-color: var(--wild-sand);
+
+    @media (max-width: 1440px) {
+        max-width: 1440px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 1024px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media (max-width: 425px) {
+        max-width: 425px;
+    }
 
     & > header {
         color: var(--white);

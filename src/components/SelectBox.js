@@ -23,6 +23,14 @@ const ButtonContainer = styled.div`
         width: 878px;
         background-color: var(--white);
         border: 1px solid var(--silver-chalice);
+
+        @media (max-width: 768px) {
+            width: 471px;
+        }
+
+        @media (max-width: 425px) {
+            width: 310px;
+        }
     }
 `;
 
@@ -57,6 +65,10 @@ const SelectBoxContainer = styled.div`
     display: flex;
     width: 100%;
     margin: 54px 0;
+
+    @media (max-width: 425px) {
+        margin: 24px 0;
+    }
 `;
 
 const SelectBox = () => {

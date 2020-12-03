@@ -13,15 +13,18 @@ const CardImgContainer = styled.div`
     justify-content: center;
 
     & > img {
+
+        &:first-child {
+            width: 100%;
+        }
+
         &:last-child {
             ${common}
         }
     }
 
     & > button {
-        &:last-child {
-            ${common}
-        }
+        ${common}
     }
 `;
 

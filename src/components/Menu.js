@@ -7,9 +7,8 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         flex-direction: column;
-        align-items: center;
     }
 `;
 
@@ -24,26 +23,34 @@ const Item = styled.li`
     height: ${({ height }) => height ? `${height}px` : 'auto'};
     padding: ${({ padding }) => padding};
     border-right: ${({ borderRight }) => borderRight}px solid var(--alto);
+
+    @media (max-width: 768px) {
+        &:nth-child(1) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 `;
 
 const ItemContainer = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
 `;
 
 const MenuContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48px;
+    height: auto;
     background-color: var(--plum-menu);
 
-    @media (max-width: 700px) {
-        height: auto;
+    @media (max-width: 768px) {
+        padding: 10px 0;
+    }
+
+    @media (max-width: 425px) {
+        max-width: 425px
     }
 `;
 

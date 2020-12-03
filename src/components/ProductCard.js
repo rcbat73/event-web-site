@@ -7,13 +7,18 @@ const CardContainer = styled.div`
         font-size: 17px;
         font-weight: bold;
         margin-top: 29px;
+
+        @media (max-width: 425px) {
+            text-align: left;
+            margin: 10px 0 20px;
+        }
     }
 `;
 
 const ProductCard = ({ productImg, description }) => {
     return (
         <CardContainer>
-            <CardImgContainer leftPos="24" bottomPos="0">
+            <CardImgContainer leftPos="24" bottomPos="0" sidesMargin="20">
                 <img src={productImg} alt={description} />
                 <img src={triangleMask} alt="" />
             </CardImgContainer>

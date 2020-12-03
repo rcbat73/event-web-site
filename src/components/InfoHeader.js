@@ -1,19 +1,41 @@
 import styled from 'styled-components';
 
-const Title = styled.p`
-    font-size: 34px;
-`;
+const ProductTitle = styled.div`
+    text-align: left;
 
-const SubTitle = styled.p`
-    font-size: 55px;
+    & > p {
+        &:first-child {
+            font-size: 34px;
+
+            @media (max-width: 768px) {
+                font-size: 4em;
+            }
+
+            @media (max-width: 425px) {
+                font-size: 1em;
+            }
+        }
+
+        &:last-child {
+            font-size: 55px;
+
+            @media (max-width: 768px) {
+                font-size: 4em;
+            }
+
+            @media (max-width: 425px) {
+                font-size: 1em;
+            }
+        }
+    }
 `;
 
 const InfoHeader = ({ text1, text2 }) => {
     return (
-        <>
-            <Title>{text1}</Title>
-            <SubTitle><strong>{text2}</strong></SubTitle>
-        </>
+        <ProductTitle>
+            <p>{text1}</p>
+            <p><strong>{text2}</strong></p>
+        </ProductTitle>
     );
 };
 

@@ -5,7 +5,7 @@ import { productsNewsData } from '../constants';
 
 const ProductsInfo = () => {
     return (
-        <InfoContainer topMargin="129" isDarkColor>
+        <InfoContainer topMargin="129" smallerMargin="40" isDarkColor>
             <InfoHeader text1="Upcoming" text2="product news" />
             <ProductsGrid data={productsNewsData} />
         </InfoContainer>

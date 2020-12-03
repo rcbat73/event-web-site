@@ -6,7 +6,7 @@ import { interviewsData } from '../constants';
 
 const InterviewsInfo = () => {
     return (
-        <InfoContainer topMargin="129" isDarkColor>
+        <InfoContainer topMargin="129" smallerMargin="40" isDarkColor>
             <InfoHeader text1="Watch" text2="interviews" />
             <InterviewsGrid data={interviewsData} />
             <TextArrowButton label="Watch other interviews" />

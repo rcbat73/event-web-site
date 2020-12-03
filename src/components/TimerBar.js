@@ -20,6 +20,11 @@ const TimerContainer = styled.div`
     top: 10px;
     z-index: 2;
 
+    @media (max-width: 425px) {
+        right: auto;
+        top: auto;
+    }
+
     & > p {
         width: 27px;
         height: 32px;
@@ -32,11 +37,22 @@ const TimerContainer = styled.div`
 
 const TimerBarContainer = styled.div`
     position: relative;
-    width: 1920px;
+    width: 100%;
     height: 48px;
     font-family: 'Centrale Sans';
     font-size: 14px;
     background-color: var(--light-wisteria);
+
+    @media (max-width: 1440px) {
+        max-width: 1440px;
+    }
+
+    @media (max-width: 425px) {
+        width: 425px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 const TimerBar = ({ days, hours, minutes, seconds}) => {

@@ -4,6 +4,10 @@ import Button from './Button';
 import playIcon from '../assets/img/playIcon.svg';
 
 const Text = styled.p`
+    @media (max-width: 425px) {
+        text-align: left;
+    }
+
     &:nth-child(2) {
         font-size: 17px;
         font-weight: bold;
@@ -25,6 +29,10 @@ const Text = styled.p`
 
 const CardContainer = styled.div`
     box-shadow: 0 1px 4px 1px var(--shadow);
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
 `;
 
 const CaseStudyCard = ({ caseStudyImg, description, date }) => {
