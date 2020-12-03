@@ -45,8 +45,17 @@ const OptionsContainer = styled.ul`
     left: 0;
     top: 31px;
     z-index: 1;
+    text-align: left;
     background-color: var(--white);
     border: 1px solid var(--silver-chalice);
+
+    @media (max-width: 768px) {
+        width: 471px;
+    }
+
+    @media (max-width: 425px) {
+        width: 310px;
+    }
 
     & li {
         margin: 7px;
