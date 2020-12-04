@@ -6,11 +6,15 @@ const CardContainer = styled.div`
     & > p {
         font-size: 17px;
         font-weight: bold;
-        margin-top: 29px;
+        text-align: left;
 
-        @media (max-width: 425px) {
-            text-align: left;
+        @media (min-width: 320px) {
             margin: 10px 0 20px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+            margin-top: 29px;
         }
     }
 `;

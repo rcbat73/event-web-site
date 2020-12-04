@@ -11,6 +11,7 @@ const ItemContainer = styled.li`
 
 const TextContainer = styled.div`
     margin-left: 12px;
+    text-align: left;
 
     & > p {
         &:last-child {

@@ -7,13 +7,23 @@ import qrCode from '../assets/img/qrCode.svg';
 const BoothMapImage = styled.img`
     margin-top: 48px;
 
-    @media (max-width: 768px) {
-        width: 672px;
+    @media (min-width: 320px) {
+        width: 260px;
     }
 
-    @media (max-width: 425px) {
-        max-width: 310px;
+    @media (min-width: 425px) {
+        width: 363px;
     }
+
+    @media (min-width: 768px) {
+        width: 674px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 960px;
+    }
+
+
 `;
 
 const QrCodeContainer = styled.div`
@@ -36,17 +46,18 @@ const BoothMapContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 145px;
     background: linear-gradient(to bottom right, var(--wine-berry), var(--plum-menu));
 
-    @media (max-width: 768px) {
+    @media (min-width: 320px) {
+        margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 145px;
         font-size: 12px;
     }
 
-    @media (max-width: 425px) {
-        max-width: 425px;
-        padding: 20px;
-    }
+
 `;
 
 const BoothMap = () => {

@@ -5,27 +5,35 @@ const ProductTitle = styled.div`
 
     & > p {
         &:first-child {
-            font-size: 34px;
+            @media (min-width: 425px) {
+                font-size: 0.8em;
+            }
 
-            @media (max-width: 768px) {
+            @media (min-width: 425px) {
+                font-size: 1em;
+            }
+
+            @media (min-width: 768px) {
                 font-size: 4em;
             }
 
-            @media (max-width: 425px) {
-                font-size: 1em;
-            }
+
         }
 
         &:last-child {
-            font-size: 55px;
 
-            @media (max-width: 768px) {
-                font-size: 4em;
+            @media (min-width: 320px) {
+                font-size: 2em;
             }
 
-            @media (max-width: 425px) {
-                font-size: 1em;
+            @media (min-width: 425px) {
+                font-size: 0.8em;
             }
+
+            @media (min-width: 768px) {
+                font-size: 55px;
+            }
+
         }
     }
 `;

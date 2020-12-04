@@ -4,7 +4,7 @@ import Button from './Button';
 import playIcon from '../assets/img/playIcon.svg';
 
 const CardContainer = styled.div`
-    @media (max-width: 768px) {
+    @media (min-width: 20px) {
         margin-top: 20px;
     }
 `;

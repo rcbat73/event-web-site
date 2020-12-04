@@ -13,7 +13,6 @@ import BoothMap from './components/BoothMap';
 import ProductBrochures from './components/ProductBrochures';
 import Footer from './components/Footer';
 import { productsGaleryData } from './constants';
-import './App.css';
 
 library.add(icons);
 
@@ -23,20 +22,12 @@ const AppContainer = styled.div`
     text-align: center;
     background-color: var(--wild-sand);
 
-    @media (max-width: 1440px) {
+    @media (min-width: 1440px) {
         max-width: 1440px;
     }
 
-    @media (max-width: 1024px) {
-        max-width: 1024px;
-    }
-
-    @media (max-width: 768px) {
-        max-width: 768px;
-    }
-
-    @media (max-width: 425px) {
-        max-width: 425px;
+    @media (min-width: 1920px) {
+        max-width: 1920px;
     }
 
     & > header {

@@ -4,10 +4,6 @@ import GridContainer from './GridContainer';
 const ImageContainer = styled.div`
     img {
         width: 100%;
-
-        @media (max-width: 425px) {
-            width: 50%;
-        }
     }
 `;
 

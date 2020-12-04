@@ -9,14 +9,13 @@ const ImageContainer = styled.div`
 `;
 
 const SettingsContainer = styled.div`
-    margin-left: 128px;
-
-    @media (max-width: 768px) {
+    @media (min-width: 425px) {
+        margin-top: 10px;
         margin-left: 0;
     }
 
-    @media (max-width: 425px) {
-        margin-top: 10px;
+    @media (min-width: 1440px) {
+        margin-left: 128px;
     }
 
     & > div {
@@ -24,14 +23,14 @@ const SettingsContainer = styled.div`
         justify-content: flex-end;
         margin-bottom: 14px;
 
-        @media (max-width: 425px) {
+        @media (min-width: 320px) {
             justify-content: flex-start;
         }
 
         & > p {
             margin-right: 9px;
 
-            @media (max-width: 1024px) {
+            @media (min-width: 1024px) {
                 text-align: left;
             }
         }
@@ -39,15 +38,23 @@ const SettingsContainer = styled.div`
 `;
 
 const SocialMediaContainer = styled.div`
-    margin-right: 256px;
-
-    @media (max-width: 768px) {
+    @media (min-width: 320px) {
         margin-right: 0;
+    }
+
+    @media (min-width: 1440px) {
+        margin-right: 256px;
     }
 
     & > div {
         &:nth-child(2) {
-            @media (max-width: 425px) {
+            @media (min-width: 320px) {
+                grid-template-columns: repeat(4, auto);
+                grid-gap: 17px;
+                margin: 10px 0;
+            }
+
+            @media (min-width: 768px) {
                 grid-template-columns: repeat(4, auto);
                 grid-gap: 17px;
                 margin: 10px 0;
@@ -61,38 +68,65 @@ const TopContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 
-    @media (max-width: 1024px) {
-        margin: 85px 40px 0;
+    @media (min-width: 320px) {
+        grid-template-columns: auto;
+        margin-top: 20px;
     }
 
-    @media (max-width: 425px) {
-        grid-template-columns: auto;
+    @media (min-width: 425px) {
         margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+        grid-row-gap: 40px;
+        margin-top: 20px;
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: auto;
+        margin: 85px 40px 0;
     }
 `;
 
 const BottomContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(7, auto);
-    margin-top: 68px;
 
-    @media (max-width: 425px) {
+    @media (min-width: 320px) {
         margin-top: 0;
         margin-bottom: 20px;
         grid-template-columns: repeat(3, auto);
     }
 
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(7, auto);
+        margin-top: 68px;
+    }
+
     & > a {
-        padding: 0 10px;
+        padding: 5px 5px;
         color: var(--wild-sand);
         text-align: center;
         border-right: 1px solid var(--wild-sand);
 
         &:last-child {
-            border: none;
-
-            @media (max-width: 425px) {
+            @media (min-width: 320px) {
                 grid-column-start: span 3;
+                border: none;
+            }
+
+            @media (min-width: 768px) {
+                grid-column-start: auto;
+            }
+        }
+
+        &:nth-child(3), :nth-child(6), last-child {
+            @media (min-width: 320px) {
+                border: none;
+            }
+
+            @media (min-width: 768px) {
+                border-right: 1px solid var(--wild-sand);
             }
         }
     }
@@ -110,21 +144,22 @@ const FooterContainer = styled.div`
     margin-top: 145px;
     background: linear-gradient(to right, var(--wine-berry), var(--plum-menu));
 
-    @media (max-width: 768px) {
-        width: 768px;
-    }
-
-    @media (max-width: 425px) {
+    @media (min-width: 320px) {
         margin-top: 20px;
-        max-width: 425px;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        min-width: 768px;
+    }
+
+
 
     & > p {
         &:last-child {
             margin-top: 12px;
 
-            @media (max-width: 425px) {
+            @media (min-width: 320px) {
                 margin-bottom: 20px;
             }
         }

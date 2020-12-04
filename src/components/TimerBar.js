@@ -16,13 +16,16 @@ const TimerContainer = styled.div`
     position: absolute;
     display: flex;
     justify-content: center;
-    right: 88px;
-    top: 10px;
     z-index: 2;
 
-    @media (max-width: 425px) {
+    @media (min-width: 320px) {
         right: auto;
         top: auto;
+    }
+
+    @media (min-width: 768px) {
+        right: 88px;
+        top: 10px;
     }
 
     & > p {
@@ -37,18 +40,11 @@ const TimerContainer = styled.div`
 
 const TimerBarContainer = styled.div`
     position: relative;
-    width: 100%;
     height: 48px;
-    font-family: 'Centrale Sans';
     font-size: 14px;
     background-color: var(--light-wisteria);
 
-    @media (max-width: 1440px) {
-        max-width: 1440px;
-    }
-
-    @media (max-width: 425px) {
-        width: 425px;
+    @media (min-width: 320px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -57,7 +53,7 @@ const TimerBarContainer = styled.div`
 
 const TimerBar = ({ days, hours, minutes, seconds}) => {
     return (
-        <TimerBarContainer>
+        <TimerBarContainer >
             <TimeProgressBar />
             <TimerContainer>
                 <p>{days}<br/>days</p>

@@ -9,8 +9,15 @@ const ButtonLabel = styled.span`
 `;
 
 const Label = styled.span`
-    margin-right: 22px;
     font-size: 14px;
+
+    @media (min-width: 320px) {
+        margin-right: 10px;
+    }
+
+    @media (min-width: 768) {
+        margin-right: 22px;
+    }
 `;
 
 const ButtonContainer = styled.div`
@@ -20,16 +27,27 @@ const ButtonContainer = styled.div`
     position: relative;
 
     & > button {
-        width: 878px;
         background-color: var(--white);
         border: 1px solid var(--silver-chalice);
 
-        @media (max-width: 768px) {
+        @media (min-width: 320px) {
+            width: 190px;
+        }
+
+        @media (min-width: 375px) {
+            width: 240px;
+        }
+
+        @media (min-width: 425px) {
+            width: 290px;
+        }
+
+        @media (min-width: 768px) {
             width: 471px;
         }
 
-        @media (max-width: 425px) {
-            width: 310px;
+        @media (min-width: 1440px) {
+            width: 878px;
         }
     }
 `;
@@ -49,13 +67,23 @@ const OptionsContainer = styled.ul`
     background-color: var(--white);
     border: 1px solid var(--silver-chalice);
 
-    @media (max-width: 768px) {
+    @media (min-width: 320px) {
+        width: 190px;
+    }
+
+    @media (min-width: 375px) {
+        width: 240px;
+    }
+
+    @media (min-width: 425px) {
+        width: 290px;
+    }
+
+    @media (min-width: 768px) {
         width: 471px;
     }
 
-    @media (max-width: 425px) {
-        width: 310px;
-    }
+
 
     & li {
         margin: 7px;
@@ -75,7 +103,7 @@ const SelectBoxContainer = styled.div`
     width: 100%;
     margin: 54px 0;
 
-    @media (max-width: 425px) {
+    @media (min-width: 320px) {
         margin: 24px 0;
     }
 `;

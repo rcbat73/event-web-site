@@ -6,9 +6,10 @@ import logo from '../assets/img/logoTop.png'
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
+    @media (min-width: 1024px) {
+        flex-direction: row;
     }
 `;
 
@@ -19,23 +20,49 @@ const Link = styled.a.attrs(({ href }) => ({ href }))`
     text-decoration: none;
 `;
 
+const ItemContainer = styled.ul`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 320px) {
+        padding: 2px 0;
+    }
+
+    @media (min-width: 425px) {
+        &:first-child {
+            & > li:nth-child(2) {
+                padding: 6px 21px 0 17px;
+            }
+
+            & > li:nth-child(3) {
+                padding: 6px 0 0 21px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &:nth-child(2) {
+            & > li:first-child {
+                padding-left: 142px;
+            }
+
+            & > li:nth-child(2) {
+                padding-left: 20px;
+            }
+        }
+    }
+`;
+
 const Item = styled.li`
     height: ${({ height }) => height ? `${height}px` : 'auto'};
     padding: ${({ padding }) => padding};
     border-right: ${({ borderRight }) => borderRight}px solid var(--alto);
 
-    @media (max-width: 768px) {
-        &:nth-child(1) {
-            padding-left: 0;
-            padding-right: 0;
-        }
+    @media (min-width: 320px) {
+        padding-left: 4px;
+        padding-right: 4px;
     }
-`;
-
-const ItemContainer = styled.ul`
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `;
 
 const MenuContainer = styled.div`
@@ -45,12 +72,8 @@ const MenuContainer = styled.div`
     height: auto;
     background-color: var(--plum-menu);
 
-    @media (max-width: 768px) {
+    @media (min-width: 320px) {
         padding: 10px 0;
-    }
-
-    @media (max-width: 425px) {
-        max-width: 425px
     }
 `;
 
@@ -59,13 +82,13 @@ const Menu = () => {
         <MenuContainer>
             <Nav>
                 <ItemContainer>
-                    <Item borderRight="0" padding="0 17px 0 0" height="48"><img src={logo} alt="Logo" /></Item>
-                    <Item borderRight="1" padding="6px 21px 0 17px" height="27"><Link href="#Products">Products</Link></Item>
-                    <Item borderRight="0" padding="6px 0 0 21px" height="27"><Link href="#Products">Product support</Link></Item>
+                    <Item borderRight="0" height="48"><img src={logo} alt="Logo" /></Item>
+                    <Item borderRight="1" height="27"><Link href="#Products">Products</Link></Item>
+                    <Item borderRight="0" height="27"><Link href="#Products">Product support</Link></Item>
                 </ItemContainer>
                 <ItemContainer>
-                    <Item borderRight="0" padding="0 0 0 142px"><SearchBar /></Item>
-                    <Item borderRight="0" padding="0 0 0 20px"><LoggedUser amount="1" /></Item>
+                    <Item borderRight="0"><SearchBar /></Item>
+                    <Item borderRight="0"><LoggedUser amount="1" /></Item>
                 </ItemContainer>
             </Nav>
         </MenuContainer>

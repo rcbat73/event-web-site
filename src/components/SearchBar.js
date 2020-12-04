@@ -9,7 +9,6 @@ const Label = styled.label.attrs({ htmlFor: 'search'})`
 const SearchBarContainer = styled.div`
     position: relative;
     display: flex;
-    width: 430px;
     height: 31px;
     align-items: center;
     background-color: var(--wine-berry);
@@ -35,8 +34,16 @@ const SearchBarContainer = styled.div`
         margin: 8px 11px;
     }
 
-    @media (max-width: 425px) {
-        width: 300px;
+    @media (min-width: 320px) {
+        width: 250px;
+    }
+
+    @media (min-width: 375px) {
+        width: 288px;
+    }
+
+    @media (min-width: 768px) {
+        width: 430px;
     }
 `;
 
