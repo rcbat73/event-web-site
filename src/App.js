@@ -56,9 +56,9 @@ const App = () => {
                 <Share />
                 <InterviewsInfo />
                 <BoothMap />
-                <ProductBrochures />
-                <Footer />
+                <ProductBrochures />                
             </main>
+			<Footer />
         </AppContainer>
     );
 };
